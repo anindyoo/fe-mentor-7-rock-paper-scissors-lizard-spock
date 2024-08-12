@@ -2,7 +2,7 @@ const App = () => {
   console.log();
 
   return (
-    <div className="App">
+    <div className="App ">
       RPSLS
     </div>
   );
