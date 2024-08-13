@@ -39,6 +39,7 @@ module.exports = {
         // TEXT
         darkText: 'hsla(229, 25%, 31%, 1)',
         scoreText: 'hsla(229, 64%, 46%, 1)',
+        scoreNumberText: 'hsla(250, 8%, 47%, 1)',
 
         // OUTLINE
         headerOutline: 'hsla(217, 16%, 45%, 1)',
