@@ -5,8 +5,14 @@
 * {
   font-family: "Barlow Semi Condensed", sans-serif;
   font-optical-sizing: auto;
+  
+  @apply text-white
 }
 
 body {
-  @apply bg-mainBg bg-no-repeat h-screen
+  @apply bg-mainBg bg-no-repeat min-h-screen
+}
+
+.SECTION-CENTER {
+  @apply max-w-[69.375rem] w-full mx-auto
 }
