@@ -25,6 +25,9 @@ module.exports = {
         // APP BACKGROUND
         mainBg: 'radial-gradient(circle at 50% -80%, hsla(214, 47%, 23%, 1) 0%, hsla(237, 49%, 15%, 1) 100%)',
       },
+      backgroundColor: {
+        scoreBgColor: 'hsla(0, 0%, 97%, 1)',
+      },
       colors: {
         // BUTTONS SHADOWS
         scissorsGradient: 'hsla(28, 75%, 45%, 1)',
