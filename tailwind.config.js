@@ -30,11 +30,11 @@ module.exports = {
       },
       colors: {
         // BUTTONS SHADOWS
-        scissorsGradient: 'hsla(28, 75%, 45%, 1)',
-        paperGradient: 'hsla(229, 65%, 46%, 1)',
-        rockGradient: 'hsla(347, 77%, 35%, 1)',
-        lizardGradient: 'hsla(261, 51%, 45%, 1)',
-        spockGradient: 'hsla(194, 58%, 43%, 1)',
+        scissorsShadow: 'hsla(28, 75%, 45%, 1)',
+        paperShadow: 'hsla(229, 65%, 46%, 1)',
+        rockShadow: 'hsla(347, 77%, 35%, 1)',
+        lizardShadow: 'hsla(261, 51%, 45%, 1)',
+        spockShadow: 'hsla(194, 58%, 43%, 1)',
 
         // TEXT
         darkText: 'hsla(229, 25%, 31%, 1)',
