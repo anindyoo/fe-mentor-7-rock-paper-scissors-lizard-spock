@@ -28,6 +28,8 @@
         "jsx-a11y"
     ],
     "rules": {
+        "global-require": "off",
+        "import/no-dynamic-require": "off",
         "react/react-in-jsx-scope": "off",
         "react/prop-types": "off",
         "quotes": [
