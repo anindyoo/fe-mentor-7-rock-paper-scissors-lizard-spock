@@ -30,7 +30,7 @@ module.exports = {
       },
       colors: {
         // BUTTON NEUTRAL
-        innerButton: 'hsla(0, 0%, 89%, 1)',
+        innerButton: 'hsla(0, 0%, 91%, 1)',
 
         // BUTTONS SHADOWS
         scissorsShadow: 'hsla(28, 75%, 45%, 1)',
