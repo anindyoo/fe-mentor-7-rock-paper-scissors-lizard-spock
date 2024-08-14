@@ -29,12 +29,16 @@ module.exports = {
         scoreBgColor: 'hsla(0, 0%, 97%, 1)',
       },
       colors: {
+        // BUTTON NEUTRAL
+        innerButton: 'hsla(0, 0%, 89%, 1)',
+
         // BUTTONS SHADOWS
         scissorsShadow: 'hsla(28, 75%, 45%, 1)',
         paperShadow: 'hsla(229, 65%, 46%, 1)',
         rockShadow: 'hsla(347, 77%, 35%, 1)',
         lizardShadow: 'hsla(261, 51%, 45%, 1)',
         spockShadow: 'hsla(194, 58%, 43%, 1)',
+        innerShadow: 'hsla(228, 21%, 78%, 1)',
 
         // TEXT
         darkText: 'hsla(229, 25%, 31%, 1)',
