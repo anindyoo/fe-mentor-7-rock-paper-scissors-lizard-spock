@@ -14,7 +14,7 @@ const Header = () => {
       flex flex-row justify-between items-center
       max-w-[44rem] w-full h-[9.625rem]
       pl-[2.125rem] pr-[1.625rem]
-      border border-headerOutline
+      border-4 border-headerOutline
       rounded-2xl"
       >
         <ul className="
