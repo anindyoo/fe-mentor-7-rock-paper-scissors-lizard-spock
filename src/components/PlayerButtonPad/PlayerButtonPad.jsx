@@ -3,7 +3,7 @@ import pentagonPad from '../../assets/images/player_button_pad/bg-pentagon.svg';
 
 const buttonsData = [
   {
-    id: 'scissors',
+    id: '1',
     gradient: 'bg-scissorsGradient',
     shadow: 'border-b-scissorsShadow',
     icon: 'icon-scissors.svg',
@@ -11,7 +11,7 @@ const buttonsData = [
     positions: 'left-[17.375rem]',
   },
   {
-    id: 'paper',
+    id: '2',
     gradient: 'bg-paperGradient',
     shadow: 'border-b-paperShadow',
     icon: 'icon-paper.svg',
@@ -19,7 +19,7 @@ const buttonsData = [
     positions: 'left-[27.688rem] top-[8.063rem]',
   },
   {
-    id: 'rock',
+    id: '3',
     gradient: 'bg-rockGradient',
     shadow: 'border-b-rockShadow',
     icon: 'icon-rock.svg',
@@ -27,7 +27,7 @@ const buttonsData = [
     positions: 'left-[23.563rem] top-[19.688rem]',
   },
   {
-    id: 'lizard',
+    id: '4',
     gradient: 'bg-lizardGradient',
     shadow: 'border-b-lizardShadow',
     icon: 'icon-lizard.svg',
@@ -35,7 +35,7 @@ const buttonsData = [
     positions: 'left-[11.188rem] top-[19.688rem]',
   },
   {
-    id: 'spock',
+    id: '5',
     gradient: 'bg-spockGradient',
     shadow: 'border-b-spockShadow',
     icon: 'icon-spock.svg',
