@@ -1,7 +1,12 @@
+import MatchingButtonPad from '../components/PlayerButtonPad/MatchingButtonPad';
 import PlayerButtonPad from '../components/PlayerButtonPad/PlayerButtonPad';
+import useGameStore from '../store/gameStore';
 
 const Home = () => {
-  console.log();
+  const {
+    player1,
+    player2,
+  } = useGameStore();
 
   return (
     <div className="
@@ -9,7 +14,8 @@ const Home = () => {
     SECTION-CENTER
     flex justify-center"
     >
-      <PlayerButtonPad />
+      {!player1 && !player2 && <PlayerButtonPad />}
+      {player1 && <MatchingButtonPad />}
     </div>
   );
 };
