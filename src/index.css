@@ -16,3 +16,29 @@ body {
 .SECTION-CENTER {
   @apply max-w-[69.375rem] w-full mx-auto
 }
+
+.BUTTON-LOADING {
+	-webkit-animation: scale-up-center 0.3s cubic-bezier(0.250, 0.460, 0.450, 0.940) infinite alternate both;
+  animation: scale-up-center 0.3s cubic-bezier(0.250, 0.460, 0.450, 0.940) infinite alternate both;
+}
+
+@-webkit-keyframes scale-up-center {
+  0% {
+    -webkit-transform: scale(0.5);
+    transform: scale(0.5);
+  }
+  100% {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+  }
+}
+@keyframes scale-up-center {
+  0% {
+    -webkit-transform: scale(0.5);
+    transform: scale(0.5);
+  }
+  100% {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+  }
+}

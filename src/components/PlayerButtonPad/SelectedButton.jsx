@@ -1,4 +1,5 @@
 import helpers from '../../helpers/helpers';
+import LoadingButton from './LoadingButton';
 import PlayerButton from './PlayerButton';
 
 const PlayerHeader = ({ player, text }) => (
@@ -41,7 +42,7 @@ const SelectedButton = (props) => {
               isMatching
               data={findButtonData(choice)}
             />
-          ) : 'loading'
+          ) : <LoadingButton />
         )}
       </div>
     </div>
