@@ -3,7 +3,7 @@ import useGameStore from '../../store/gameStore';
 const PlayerButton = (props) => {
   const {
     data,
-    isBig,
+    isMatching,
   } = props;
 
   const {
@@ -12,7 +12,7 @@ const PlayerButton = (props) => {
 
   const handlePlayerButtonClick = (e) => {
     e.preventDefault();
-    if (!isBig) {
+    if (!isMatching) {
       setPlayer({
         player: 1,
         choice: data.id,
@@ -32,21 +32,21 @@ const PlayerButton = (props) => {
       onClick={handlePlayerButtonClick}
       className={`
       PLAYER-BUTTON
-      ${!isBig && `absolute ${data.positions}`}`}
+      ${!isMatching && `absolute ${data.positions}`}`}
     >
       <div className={`
       OUTTER-CIRCLE
       flex justify-center items-center
       rounded-full
       border-b-[0.375rem]
-      ${isBig ? 'w-[18.75rem] h-[18.75rem]' : 'w-[9.25rem] h-[9.25rem]'}
+      ${isMatching ? 'w-[18.75rem] h-[18.75rem]' : 'w-[9.25rem] h-[9.25rem]'}
       ${data.gradient}
       ${data.shadow}`}
       >
         <div className={`
         INNER-CIRCLE
         flex justify-center items-center
-        ${isBig ? 'w-[14.25rem] h-[14.25rem]' : 'w-28 h-28'}
+        ${isMatching ? 'w-[14.25rem] h-[14.25rem]' : 'w-28 h-28'}
         rounded-full
         border-t-4 border-t-innerShadow
         bg-innerButton`}
@@ -55,7 +55,7 @@ const PlayerButton = (props) => {
             <img
               src={require(`../../assets/icons/player_button_icons/${data.icon}`)}
               alt={data.iconsAlt}
-              className={isBig && 'max-w-[200%] w-[200%] -ml-[50%]'}
+              className={isMatching && 'max-w-[200%] w-[200%] -ml-[50%]'}
             />
           </div>
         </div>

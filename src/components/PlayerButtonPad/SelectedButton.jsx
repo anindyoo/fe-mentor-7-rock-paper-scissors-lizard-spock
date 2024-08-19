@@ -31,14 +31,14 @@ const SelectedButton = (props) => {
         <PlayerHeader player={text} text={text} />
         {player === '1' && (
           <PlayerButton
-            isBig
+            isMatching
             data={findButtonData(choice)}
           />
         )}
         {player === '2' && (
           choice ? (
             <PlayerButton
-              isBig
+              isMatching
               data={findButtonData(choice)}
             />
           ) : 'loading'
