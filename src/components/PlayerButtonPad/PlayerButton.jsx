@@ -12,16 +12,18 @@ const PlayerButton = (props) => {
 
   const handlePlayerButtonClick = (e) => {
     e.preventDefault();
-    setPlayer({
-      player: 1,
-      choice: data.id,
-    });
-    setTimeout(() => {
+    if (!isBig) {
       setPlayer({
-        player: 2,
-        choice: Math.floor(Math.random() * 6),
+        player: 1,
+        choice: data.id,
       });
-    }, 3000);
+      setTimeout(() => {
+        setPlayer({
+          player: 2,
+          choice: Math.floor(Math.random() * 6),
+        });
+      }, 3000);
+    }
   };
 
   return (
