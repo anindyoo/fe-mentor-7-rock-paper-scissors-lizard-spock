@@ -1,7 +1,7 @@
 const buttonsData = [
   {
     id: 1,
-    value: 1,
+    value: 3,
     gradient: 'bg-scissorsGradient',
     shadow: 'border-b-scissorsShadow',
     icon: 'icon-scissors.svg',
