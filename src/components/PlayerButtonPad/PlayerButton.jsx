@@ -15,7 +15,7 @@ const PlayerButton = (props) => {
     if (!isMatching) {
       setPlayer({
         player: 1,
-        choice: data.id,
+        choice: data.value,
       });
       setTimeout(() => {
         setPlayer({
