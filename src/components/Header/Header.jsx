@@ -1,7 +1,16 @@
+import { useEffect, useState } from 'react';
+import useGameStore from '../../store/gameStore';
+
 const titleNames = ['ROCK', 'PAPER', 'SCISSORS', 'LIZARD', 'SPOCK'];
 
 const Header = () => {
-  console.log();
+  const { score } = useGameStore();
+
+  const [currentScore, setCurrentScore] = useState(score);
+
+  useEffect(() => {
+    setTimeout(() => setCurrentScore(score), 2400);
+  }, [score]);
 
   return (
     <div className="
@@ -52,7 +61,7 @@ const Header = () => {
           -mt-[0.188rem]
           text-[3.875rem]/[1.065em] font-bold text-scoreNumberText"
           >
-            12
+            {currentScore}
           </div>
         </div>
       </div>

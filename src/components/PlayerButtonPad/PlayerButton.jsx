@@ -8,6 +8,7 @@ const PlayerButton = (props) => {
 
   const {
     setPlayer,
+    setScore,
   } = useGameStore();
 
   const handlePlayerButtonClick = (e) => {
@@ -22,6 +23,7 @@ const PlayerButton = (props) => {
           player: 2,
           choice: Math.floor(Math.random() * 6),
         });
+        setScore();
       }, 3000);
     }
   };
