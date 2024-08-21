@@ -21,7 +21,7 @@ const PlayerButton = (props) => {
       setTimeout(() => {
         setPlayer({
           player: 2,
-          choice: Math.floor(Math.random() * 6),
+          choice: Math.floor(Math.random() * 5) + 1,
         });
         setScore();
       }, 3000);
