@@ -1,6 +1,7 @@
 const buttonsData = [
   {
     id: 1,
+    value: 1,
     gradient: 'bg-scissorsGradient',
     shadow: 'border-b-scissorsShadow',
     icon: 'icon-scissors.svg',
@@ -9,6 +10,7 @@ const buttonsData = [
   },
   {
     id: 2,
+    value: 2,
     gradient: 'bg-paperGradient',
     shadow: 'border-b-paperShadow',
     icon: 'icon-paper.svg',
@@ -17,6 +19,7 @@ const buttonsData = [
   },
   {
     id: 3,
+    value: 1,
     gradient: 'bg-rockGradient',
     shadow: 'border-b-rockShadow',
     icon: 'icon-rock.svg',
@@ -25,6 +28,7 @@ const buttonsData = [
   },
   {
     id: 4,
+    value: 5,
     gradient: 'bg-lizardGradient',
     shadow: 'border-b-lizardShadow',
     icon: 'icon-lizard.svg',
@@ -33,6 +37,7 @@ const buttonsData = [
   },
   {
     id: 5,
+    value: 4,
     gradient: 'bg-spockGradient',
     shadow: 'border-b-spockShadow',
     icon: 'icon-spock.svg',
