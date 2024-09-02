@@ -33,6 +33,11 @@ const useGameStore = create((set) => ({
         });
     });
   },
+  resetGame: () => set({
+    player1: null,
+    player2: null,
+    winner: 0,
+  }),
 }));
 
 export default useGameStore;

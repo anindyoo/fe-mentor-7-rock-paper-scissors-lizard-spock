@@ -1,7 +1,12 @@
 import useGameStore from '../../store/gameStore';
 
 const GameResult = () => {
-  const { winner } = useGameStore();
+  const { winner, resetGame } = useGameStore();
+
+  const handlePlayAgainClick = (e) => {
+    e.preventDefault();
+    resetGame();
+  };
 
   return (
     <div className="
@@ -20,6 +25,7 @@ const GameResult = () => {
       </div>
       <button
         type="button"
+        onClick={handlePlayAgainClick}
         className="
         PLAY-AGAIN-BUTTON
         w-full
