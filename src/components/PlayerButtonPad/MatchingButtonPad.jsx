@@ -24,17 +24,35 @@ const MatchingButtonPad = () => {
     flex flex-row justify-between
     max-w-[44rem] w-full"
     >
-      <SelectedButton
-        player="1"
-        choice={player1}
-        text="YOU PICKED"
-      />
-      {showGameResult && <GameResult />}
-      <SelectedButton
-        player="2"
-        choice={player2}
-        text="THE HOUSE PICKED"
-      />
+      <div className={`
+      ${showGameResult
+        ? 'absolute left-[-9.125rem]'
+        : ''}
+      `}
+      >
+        <SelectedButton
+          player="1"
+          choice={player1}
+          text="YOU PICKED"
+        />
+      </div>
+      {showGameResult && (
+        <div className="absolute left-[15.188rem]">
+          <GameResult />
+        </div>
+      )}
+      <div className={`
+      ${showGameResult
+        ? 'absolute right-[-7.5rem]'
+        : ''}
+      `}
+      >
+        <SelectedButton
+          player="2"
+          choice={player2}
+          text="THE HOUSE PICKED"
+        />
+      </div>
     </div>
   );
 };
