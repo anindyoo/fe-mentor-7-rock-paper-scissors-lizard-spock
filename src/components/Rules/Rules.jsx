@@ -15,8 +15,9 @@ const Rules = () => {
         onClick={handleOpenModalButton}
         className="
         RULES-BUTTON
-        absolute right-8 bottom-8
+        absolute left-[50%] lg:right-8 bottom-[11.875rem] lg:bottom-8
         h-[2.625rem]
+        -ml-[4.288rem] lg:ml-0
         px-10
         border-2 border-headerOutline
         rounded-lg

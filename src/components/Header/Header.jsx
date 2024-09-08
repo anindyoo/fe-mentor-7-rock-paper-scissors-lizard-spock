@@ -21,7 +21,7 @@ const Header = () => {
       <div className="
       SCORE-HEADER
       flex flex-row justify-between items-center
-      max-w-[44rem] w-full h-[9.625rem]
+      max-w-[19.688rem] lg:max-w-[44rem] w-full h-[9.625rem]
       pl-[2.125rem] pr-[1.625rem]
       border-4 border-headerOutline
       rounded-2xl"

@@ -41,14 +41,14 @@ const PlayerButton = (props) => {
       flex justify-center items-center
       rounded-full
       border-b-[0.375rem]
-      ${isMatching ? 'w-[18.75rem] h-[18.75rem]' : 'w-[9.25rem] h-[9.25rem]'}
+      ${isMatching ? 'lg:w-[18.75rem] lg:h-[18.75rem]' : 'w-[6.125rem] lg:w-[9.25rem] h-[6.125rem] lg:h-[9.25rem]'}
       ${data.gradient}
       ${data.shadow}`}
       >
         <div className={`
         INNER-CIRCLE
         flex justify-center items-center
-        ${isMatching ? 'w-[14.25rem] h-[14.25rem]' : 'w-28 h-28'}
+        ${isMatching ? 'w-[14.25rem] h-[14.25rem]' : 'w-[4.635rem] lg:w-28 h-[4.635rem] lg:h-28'}
         rounded-full
         border-t-4 border-t-innerShadow
         bg-innerButton`}
@@ -57,7 +57,10 @@ const PlayerButton = (props) => {
             <img
               src={require(`../../assets/icons/player_button_icons/${data.icon}`)}
               alt={data.iconsAlt}
-              className={isMatching && 'max-w-[200%] w-[200%] -ml-[50%]'}
+              className={`
+              BUTTON-ICON
+              w-8 h-8 lg:w-auto lg:h-auto
+              ${isMatching && 'max-w-[200%] w-[200%] -ml-[50%]'}`}
             />
           </div>
         </div>

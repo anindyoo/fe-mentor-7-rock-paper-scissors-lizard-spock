@@ -10,7 +10,7 @@ const PlayerButtonPad = () => {
     PLAYER-BUTTON-PAD
     relative
     flex justify-center
-    max-w-[44rem] w-full"
+    max-w-[19.688rem] lg:max-w-[44rem] w-full"
     >
       <ul className="
       BUTTON-LIST
@@ -28,7 +28,8 @@ const PlayerButtonPad = () => {
         alt="Pentagon line."
         className="
         PENTAGON-PAD
-        mt-[4.688rem]"
+        w-[12.5rem] lg:w-auto h-[11.875rem] lg:h-auto
+        mt-[3.681rem] lg:mt-[4.688rem]"
       />
     </div>
   );
