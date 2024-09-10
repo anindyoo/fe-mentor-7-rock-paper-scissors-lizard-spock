@@ -62,10 +62,9 @@ const PlayerButton = (props) => {
               alt={data.iconsAlt}
               className={`
               BUTTON-ICON
-              w-8 h-auto lg:w-auto
               ${isMatching
                 ? 'max-w-[93.75%] w-[93.75%] lg:max-w-[200%] lg:w-[200%] lg:-ml-[50%]'
-                : ''
+                : 'w-8 h-auto lg:w-auto'
               }`}
             />
           </div>
