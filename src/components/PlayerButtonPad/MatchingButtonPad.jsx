@@ -21,7 +21,8 @@ const MatchingButtonPad = () => {
     <div className="
     MATCHING-BUTTON-PAD-RESULT-WRAPPER
     flex flex-col items-center
-    max-w-[19.688rem] lg:max-w-[44rem] w-full"
+    max-w-[19.688rem] lg:max-w-[44rem] w-full
+    mt-1 lg:mt-6"
     >
       <div className="
       MATCHING-BUTTON-PAD
