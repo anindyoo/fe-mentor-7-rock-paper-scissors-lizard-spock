@@ -36,8 +36,8 @@ const Rules = () => {
         <div className="
         RULES-MODAL
         relative z-20
-        flex flex-col gap-4
-        w-[25rem] h-[28.813rem]
+        flex flex-col gap-4 items-center lg:items-start
+        w-screen lg:w-[25rem] h-screen lg:h-[28.813rem]
         px-8 pt-7 pb-[2.938rem]
         rounded-md
         bg-white
@@ -45,12 +45,14 @@ const Rules = () => {
         >
           <div className="
           RULES-MODAL-HEADER
-          flex flex-row justify-between items-center"
+          flex flex-col lg:flex-row justify-between items-center
+          mt-[5.938rem] lg:mt-0"
           >
             <div className="MODAL-TITLE text-[2rem] font-bold text-darkText">RULES</div>
             <button
               type="button"
               onClick={handleCloseModalButton}
+              className="hidden lg:visible"
             >
               <img
                 src={closeIcon}
@@ -59,7 +61,22 @@ const Rules = () => {
               />
             </button>
           </div>
-          <img src={rulesImage} alt="Rules image." />
+          <img
+            src={rulesImage}
+            alt="Rules image."
+            className="mt-[5.813rem] lg:mt-0"
+          />
+          <button
+            type="button"
+            onClick={handleCloseModalButton}
+            className="visible lg:hidden mt-[8.625rem] lg:mt-0"
+          >
+            <img
+              src={closeIcon}
+              alt="Cross or X icon for clossing the rules modal."
+              className="w-5 h-5"
+            />
+          </button>
         </div>
         <div className="
         OVERLAY-SHADOW
