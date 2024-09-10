@@ -11,16 +11,17 @@ const Rules = () => {
   return (
     <div className="
     RULES-BUTTON-MODAL-WRAPPER
-    absolute left-[50%] lg:left-auto lg:right-8 bottom-0 lg:bottom-8"
+    flex lg:block justify-center items-start
+    h-[5.25rem]
+    mb-[3.438rem]s lg:mb-0"
     >
       <button
         type="button"
         onClick={handleOpenModalButton}
         className="
         RULES-BUTTON
+        lg:absolute lg:left-auto lg:right-8 lg:bottom-8
         h-[2.625rem]
-        -ml-[4.288rem] lg:ml-0
-        mb-[3.438rem] lg:mb-0
         px-10
         border-2 border-headerOutline
         rounded-lg
@@ -40,7 +41,7 @@ const Rules = () => {
         RULES-MODAL
         relative z-20
         flex flex-col gap-4 items-center lg:items-start
-        w-screen lg:w-[25rem] h-screen lg:h-[28.813rem]
+        w-screen lg:w-[25rem] min-h-screen lg:min-h-0 lg:h-[28.813rem]
         px-8 pt-7 pb-[2.938rem]
         rounded-md
         bg-white
