@@ -9,15 +9,18 @@ const Rules = () => {
   const handleCloseModalButton = () => setModalIsActive(false);
 
   return (
-    <div className="RULES-BUTTON-MODAL-WRAPPER">
+    <div className="
+    RULES-BUTTON-MODAL-WRAPPER
+    absolute left-[50%] lg:left-auto lg:right-8 bottom-0 lg:bottom-8"
+    >
       <button
         type="button"
         onClick={handleOpenModalButton}
         className="
         RULES-BUTTON
-        absolute left-[50%] lg:left-auto lg:right-8 bottom-[11.875rem] lg:bottom-8
         h-[2.625rem]
         -ml-[4.288rem] lg:ml-0
+        mb-[3.438rem] lg:mb-0
         px-10
         border-2 border-headerOutline
         rounded-lg
