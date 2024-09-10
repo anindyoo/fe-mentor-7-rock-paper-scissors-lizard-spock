@@ -40,17 +40,20 @@ const PlayerButton = (props) => {
       OUTTER-CIRCLE
       flex justify-center items-center
       rounded-full
-      border-b-[0.375rem]
-      ${isMatching ? 'lg:w-[18.75rem] lg:h-[18.75rem]' : 'w-[6.125rem] lg:w-[9.25rem] h-[6.125rem] lg:h-[9.25rem]'}
+      ${isMatching
+        ? 'w-[8.25rem] lg:w-[18.75rem] h-[8.25rem] lg:h-[18.75rem] border-b-[0.375rem] lg:border-b-[0.875rem]'
+        : 'w-[6.125rem] lg:w-[9.25rem] h-[6.125rem] lg:h-[9.25rem] border-b-4 lg:border-b-[0.375rem]'}
       ${data.gradient}
       ${data.shadow}`}
       >
         <div className={`
         INNER-CIRCLE
         flex justify-center items-center
-        ${isMatching ? 'w-[14.25rem] h-[14.25rem]' : 'w-[4.635rem] lg:w-28 h-[4.635rem] lg:h-28'}
+        ${isMatching
+          ? 'w-[6.25rem] lg:w-[14.25rem] h-[6.25rem] lg:h-[14.25rem] border-t-[0.313rem] lg:border-t-[0.625rem]'
+          : 'w-[4.635rem] lg:w-28 h-[4.635rem] lg:h-28 border-t-4 lg:border-t-[0.375rem]'}
         rounded-full
-        border-t-4 border-t-innerShadow
+        border-t-innerShadow
         bg-innerButton`}
         >
           <div className="BUTTON-ICON-CONTAINER">
@@ -59,8 +62,11 @@ const PlayerButton = (props) => {
               alt={data.iconsAlt}
               className={`
               BUTTON-ICON
-              w-8 h-8 lg:w-auto lg:h-auto
-              ${isMatching && 'max-w-[200%] w-[200%] -ml-[50%]'}`}
+              w-8 h-auto lg:w-auto
+              ${isMatching
+                ? 'max-w-[93.75%] w-[93.75%] lg:max-w-[200%] lg:w-[200%] lg:-ml-[50%]'
+                : ''
+              }`}
             />
           </div>
         </div>

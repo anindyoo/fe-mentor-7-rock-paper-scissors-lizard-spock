@@ -24,7 +24,7 @@ const App = () => {
   return (
     <div className="
     APP-CONTAINER
-    flex flex-col justify-center gap-[2.875rem]
+    flex flex-col justify-center gap-24 lg:gap-[2.875rem]
     pt-[2.875rem]"
     >
       <RouterProvider router={router} />

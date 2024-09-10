@@ -4,8 +4,10 @@ import PlayerButton from './PlayerButton';
 
 const PlayerHeader = ({ player, text }) => (
   <div className={`
-    PLAYER-${player}-HEADER
-    text-2xl font-bold tracking-[0.12rem]`}
+  PLAYER-${player}-HEADER
+  w-max
+  text-base lg:text-2xl font-bold tracking-[0.09rem] lg:tracking-[0.12rem]
+  text-center`}
   >
     {text}
   </div>
@@ -26,8 +28,8 @@ const SelectedButton = (props) => {
     >
       <div className={`
       PLAYER-${player}-CHOICE
-      flex flex-col justify-center items-center gap-16
-      w-[20.25rem]`}
+      flex flex-col-reverse lg:flex-col justify-center items-center gap-6 lg:gap-16
+      w-[8.125rem] lg:w-[20.25rem]`}
       >
         <PlayerHeader player={text} text={text} />
         {player === '1' && (

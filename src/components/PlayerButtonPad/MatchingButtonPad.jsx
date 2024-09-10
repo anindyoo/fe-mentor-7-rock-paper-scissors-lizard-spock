@@ -22,7 +22,7 @@ const MatchingButtonPad = () => {
     MATCHING-BUTTON-PAD
     relative
     flex flex-row justify-between
-    max-w-[44rem] w-full"
+    max-w-[19.688rem] lg:max-w-[44rem] w-full"
     >
       <div className={`
       ${showGameResult
