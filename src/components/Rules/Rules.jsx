@@ -46,13 +46,14 @@ const Rules = () => {
           <div className="
           RULES-MODAL-HEADER
           flex flex-col lg:flex-row justify-between items-center
+          w-full
           mt-[5.938rem] lg:mt-0"
           >
             <div className="MODAL-TITLE text-[2rem] font-bold text-darkText">RULES</div>
             <button
               type="button"
               onClick={handleCloseModalButton}
-              className="hidden lg:visible"
+              className="hidden lg:block"
             >
               <img
                 src={closeIcon}
