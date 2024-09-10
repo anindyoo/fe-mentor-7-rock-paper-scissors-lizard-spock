@@ -13,7 +13,7 @@ const GameResult = () => {
     GAME-RESULT-DISPLAY
     flex flex-col items-center gap-4
     w-[13.75rem]
-    pt-[11.375rem]"
+    pt-[3.375rem] lg:pt-[11.375rem]"
     >
       <div className="
       RESULT-TEXT
