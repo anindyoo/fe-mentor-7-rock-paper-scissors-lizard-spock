@@ -1,6 +1,10 @@
+import gsap from 'gsap';
+import { useGSAP } from '@gsap/react';
 import helpers from '../../helpers/helpers';
 import LoadingButton from './LoadingButton';
 import PlayerButton from './PlayerButton';
+
+gsap.registerPlugin(useGSAP);
 
 const PlayerHeader = ({ player, text }) => (
   <div className={`
@@ -22,6 +26,18 @@ const SelectedButton = (props) => {
 
   const { findButtonData } = helpers;
 
+  const player2Button = '.PLAYER-BUTTON-2';
+  useGSAP(
+    () => {
+      if (choice !== null && document.querySelector(player2Button)) {
+        gsap.fromTo(player2Button, { x: 100, opacity: 0 }, { x: 0, opacity: 1, duration: 0.5 });
+      }
+    },
+    {
+      dependencies: [choice],
+    },
+  );
+
   return (
     <div className={`
     SELECTED-BUTTON-${player}-CONTAINER`}
@@ -36,6 +52,7 @@ const SelectedButton = (props) => {
           <PlayerButton
             isMatching
             data={findButtonData(choice)}
+            player={player}
           />
         )}
         {player === '2' && (
@@ -43,6 +60,7 @@ const SelectedButton = (props) => {
             <PlayerButton
               isMatching
               data={findButtonData(choice)}
+              player={player}
             />
           ) : <LoadingButton />
         )}

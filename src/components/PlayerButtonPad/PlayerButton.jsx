@@ -4,6 +4,7 @@ const PlayerButton = (props) => {
   const {
     data,
     isMatching,
+    player,
   } = props;
 
   const {
@@ -34,6 +35,7 @@ const PlayerButton = (props) => {
       onClick={handlePlayerButtonClick}
       className={`
       PLAYER-BUTTON
+      PLAYER-BUTTON-${player}
       ${!isMatching && `absolute ${data.positions}`}`}
     >
       <div className={`
