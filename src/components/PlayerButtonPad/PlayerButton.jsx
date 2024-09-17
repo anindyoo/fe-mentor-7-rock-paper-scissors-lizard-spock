@@ -10,10 +10,15 @@ const PlayerButton = (props) => {
   const {
     setPlayer,
     setScore,
+    setPlayed,
+    played,
   } = useGameStore();
 
   const handlePlayerButtonClick = (e) => {
     e.preventDefault();
+    if (!played) {
+      setPlayed();
+    }
     if (!isMatching) {
       setPlayer({
         player: 1,

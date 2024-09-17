@@ -6,6 +6,7 @@ const useGameStore = create((set) => ({
   player2: null,
   score: 0,
   winner: 0,
+  played: false,
   setPlayer: ({ player, choice }) => {
     set(() => (
       player === 1
@@ -38,6 +39,7 @@ const useGameStore = create((set) => ({
     player2: null,
     winner: 0,
   }),
+  setPlayed: () => set({ played: true }),
 }));
 
 export default useGameStore;

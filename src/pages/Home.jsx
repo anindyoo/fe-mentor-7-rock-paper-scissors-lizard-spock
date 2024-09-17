@@ -11,14 +11,29 @@ const Home = () => {
   const {
     player1,
     player2,
+    played,
   } = useGameStore();
 
   const homeContainer = useRef();
 
   useGSAP(
     () => {
-      if (player1 !== null) {
-        gsap.fromTo('.PLAYER-BUTTON', { x: -100, opacity: 0 }, { x: 0, opacity: 1, duration: 0.5 });
+      if (played && player1 === null && player2 === null && document.querySelector('.BUTTON-LIST')) {
+        gsap.fromTo(
+          '.PLAYER-BUTTON',
+          { opacity: 0 },
+          {
+            opacity: 1,
+            duration: 1,
+            stagger: {
+              from: 'random',
+              amount: 1,
+            },
+          },
+        );
+      }
+      if (player1 !== null && document.querySelector('.PLAYER-BUTTON-1')) {
+        gsap.fromTo('.PLAYER-BUTTON-1', { x: -100, opacity: 0 }, { x: 0, opacity: 1, duration: 0.5 });
       }
     },
     {
