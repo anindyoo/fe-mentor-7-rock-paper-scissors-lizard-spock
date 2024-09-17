@@ -21,14 +21,16 @@ const MatchingButtonPad = () => {
     }
   }, [player1, player2]);
 
+  const mm = gsap.matchMedia();
   const resultContainer = '.GAME-RESULT-CONTAINER';
+  const resultMobileContainer = '.GAME-RESULT-CONTAINER-MOBILE';
   const movingButton1 = '.MOVING-BUTTON-CONTAINER-1';
   const movingButton2 = '.MOVING-BUTTON-CONTAINER-2';
 
   useGSAP(
     () => {
       if (showGameResult) {
-        gsap.matchMedia().add('(min-width: 1024px)', () => {
+        mm.add('(min-width: 1024px)', () => {
           if (document.querySelector(resultContainer)) {
             gsap.fromTo(
               resultContainer,
@@ -59,6 +61,21 @@ const MatchingButtonPad = () => {
                 x: 498,
                 duration: 1.8,
                 ease: 'power1.in',
+              },
+            );
+          }
+        });
+        mm.add('(max-width: 1023px)', () => {
+          if (document.querySelector(resultMobileContainer)) {
+            gsap.fromTo(
+              resultMobileContainer,
+              { y: 100, opacity: 0 },
+              {
+                y: 0,
+                opacity: 1,
+                duration: 0.8,
+                ease: 'power4.in',
+                delay: 0.8,
               },
             );
           }
@@ -118,11 +135,15 @@ const MatchingButtonPad = () => {
           />
         </div>
       </div>
-      {showGameResult && (
-        <div className="w-fit visible lg:hidden">
-          <GameResult />
-        </div>
-      )}
+      {showGameResult
+        ? (
+          <div className="
+        GAME-RESULT-CONTAINER-MOBILE
+        w-fit visible lg:hidden"
+          >
+            <GameResult />
+          </div>
+        ) : (<div className="GAME-RESULT-MOBILE-BUFFER h-[12.953rem]" />)}
     </div>
   );
 };

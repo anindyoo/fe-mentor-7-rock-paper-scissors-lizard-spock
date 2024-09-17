@@ -1,16 +1,45 @@
 import { useEffect, useState } from 'react';
+import gsap from 'gsap';
+import { useGSAP } from '@gsap/react';
 import useGameStore from '../../store/gameStore';
 
 const titleNames = ['ROCK', 'PAPER', 'SCISSORS', 'LIZARD', 'SPOCK'];
 
+gsap.registerPlugin(useGSAP);
+
 const Header = () => {
-  const { score } = useGameStore();
+  const { score, player2 } = useGameStore();
 
   const [currentScore, setCurrentScore] = useState(score);
 
   useEffect(() => {
-    setTimeout(() => setCurrentScore(score), 2400);
+    setTimeout(() => setCurrentScore(score), 2000);
   }, [score]);
+
+  const scoreClass = '.SCORE-NUMBER';
+
+  useGSAP(
+    () => {
+      if (document.querySelector(scoreClass) && currentScore !== score) {
+        gsap.to(scoreClass, {
+          opacity: 0, duration: 0.8, ease: 'power2.out', delay: 0.8,
+        });
+        gsap.to(scoreClass, {
+          opacity: 1,
+          duration: 0.8,
+          ease: 'power2.in',
+          delay: 2,
+          color: (score > currentScore && score !== currentScore) ? '#007f00' : '#800000',
+        });
+        gsap.to(scoreClass, {
+          color: '#716e81', duration: 0.8, ease: 'power4.in', delay: 4.6,
+        });
+      }
+    },
+    {
+      dependencies: [player2],
+    },
+  );
 
   return (
     <div className="
