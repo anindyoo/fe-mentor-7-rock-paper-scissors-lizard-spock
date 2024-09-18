@@ -103,12 +103,12 @@ const MatchingButtonPad = () => {
         <div className={`
         MOVING-BUTTON-CONTAINER-1
         ${showGameResult
-          ? 'lg:absolute lg:left-[-9.125rem]s'
+          ? 'lg:absolute'
           : ''}
         `}
         >
           <SelectedButton
-            player="1"
+            player={1}
             choice={player1}
             text="YOU PICKED"
           />
@@ -124,12 +124,12 @@ const MatchingButtonPad = () => {
         <div className={`
         MOVING-BUTTON-CONTAINER-2
         ${showGameResult
-          ? 'lg:absolute lg:right-[-7.5rem]s'
+          ? 'lg:absolute -z-50  '
           : ''}
         `}
         >
           <SelectedButton
-            player="2"
+            player={2}
             choice={player2}
             text="THE HOUSE PICKED"
           />

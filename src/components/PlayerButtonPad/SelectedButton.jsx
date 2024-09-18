@@ -48,14 +48,14 @@ const SelectedButton = (props) => {
       w-[8.125rem] lg:w-[20.25rem]`}
       >
         <PlayerHeader player={text} text={text} />
-        {player === '1' && (
+        {player === 1 && (
           <PlayerButton
             isMatching
             data={findButtonData(choice)}
             player={player}
           />
         )}
-        {player === '2' && (
+        {player === 2 && (
           choice ? (
             <PlayerButton
               isMatching

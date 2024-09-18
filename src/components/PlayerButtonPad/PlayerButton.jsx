@@ -1,4 +1,5 @@
 import useGameStore from '../../store/gameStore';
+import WinnerButton from '../WinnerButton/WinnerButton';
 
 const PlayerButton = (props) => {
   const {
@@ -12,6 +13,7 @@ const PlayerButton = (props) => {
     setScore,
     setPlayed,
     played,
+    winner,
   } = useGameStore();
 
   const handlePlayerButtonClick = (e) => {
@@ -41,10 +43,13 @@ const PlayerButton = (props) => {
       className={`
       PLAYER-BUTTON
       PLAYER-BUTTON-${player}
-      ${!isMatching && `absolute ${data.positions}`}`}
+      ${!isMatching
+        ? `absolute ${data.positions}`
+        : 'relative flex justify-center items-center'
+      }`}
     >
       <div className={`
-      OUTTER-CIRCLE
+      OUTER-CIRCLE
       flex justify-center items-center
       rounded-full
       ${isMatching
@@ -77,6 +82,7 @@ const PlayerButton = (props) => {
           </div>
         </div>
       </div>
+      {isMatching && winner === player && <WinnerButton isMatching />}
     </button>
   );
 };
