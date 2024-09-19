@@ -103,7 +103,7 @@ const MatchingButtonPad = () => {
         <div className={`
         MOVING-BUTTON-CONTAINER-1
         ${showGameResult
-          ? 'lg:absolute'
+          ? 'lg:absolute -z-50'
           : ''}
         `}
         >
@@ -124,7 +124,7 @@ const MatchingButtonPad = () => {
         <div className={`
         MOVING-BUTTON-CONTAINER-2
         ${showGameResult
-          ? 'lg:absolute -z-50  '
+          ? 'lg:absolute -z-50'
           : ''}
         `}
         >

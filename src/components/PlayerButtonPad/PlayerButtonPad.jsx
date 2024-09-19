@@ -14,7 +14,7 @@ const PlayerButtonPad = () => {
     >
       <ul className="
       BUTTON-LIST
-      absolute z-102 left-0"
+      absolute z-10 left-0"
       >
         {buttonsData.map((button) => (
           <PlayerButton
