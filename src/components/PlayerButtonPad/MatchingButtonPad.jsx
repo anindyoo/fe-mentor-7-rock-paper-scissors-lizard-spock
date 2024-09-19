@@ -11,6 +11,7 @@ const MatchingButtonPad = () => {
   const {
     player1,
     player2,
+    winner,
   } = useGameStore();
 
   const [showGameResult, setShowGameResult] = useState(false);
@@ -124,7 +125,7 @@ const MatchingButtonPad = () => {
         <div className={`
         MOVING-BUTTON-CONTAINER-2
         ${showGameResult
-          ? 'lg:absolute -z-50'
+          ? `lg:absolute ${winner === 2 ? '-z-[100]' : '-z-50'}`
           : ''}
         `}
         >
